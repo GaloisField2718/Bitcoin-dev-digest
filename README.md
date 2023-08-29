@@ -22,6 +22,10 @@ pipenv shell
 
 If `--ignore-pipfile` flag doesn't work try `--dev-dependencies` flag.
 
+## Setup
+
+We need to setup the config in `.env` file. I used `email` and `KEY` names for constants.
+
 ## Run
 
 In the python virtual environnement simply run `python3 script.py`.

@@ -2,7 +2,10 @@ import imaplib
 import email
 from dotenv import dotenv_values
 import os
+import datetime
 
+now = datetime.datetime.now() + datetime.timedelta(hours=2)
+print(now.strftime("[%d-%m-%Y %H:%M:%S]")+ " Script is running")
 
 config = dotenv_values(".env")
 password = config['KEY']
@@ -44,6 +47,8 @@ for msgnum in msgnums[0].split():
           f.write(message.get_payload())
         print(f"Le bitcoin-dev Digest {subject} a été ajouté aux fichiers dans {folder}")
 
+now = datetime.datetime.now() + datetime.timedelta(hours=2)
+print(now.strftime("[%d-%m-%Y %H:%M:%S]")+ " Script is finished")
 
 # Search for digest email
 #subject = 'bitcoin-dev Digest, Vol 96, Issue 46'
