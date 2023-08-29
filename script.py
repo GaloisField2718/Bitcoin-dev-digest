@@ -29,12 +29,20 @@ for msgnum in msgnums[0].split():
     subject = subject.replace(' ','_')
     folder = f'bitcoin-dev_Digest_Vol_{vol}'
     path = f'{folder}/{subject}.md'
+    
+    if os.path.exists(folder):
+      if os.path.exists(path):
+        pass
+      else :
+        with open(path,'w') as f :
+          f.write(message.get_payload())
+        print(f"Le bitcoin-dev Digest {subject} a été ajouté aux fichiers dans {folder}")
 
-    if not os.path.exists(folder):
+    else :
         os.mkdir(folder)
-
-    with open(path,'w') as f:
-        f.write(message.get_payload())
+        with open(path,'w') as f:
+          f.write(message.get_payload())
+        print(f"Le bitcoin-dev Digest {subject} a été ajouté aux fichiers dans {folder}")
 
 
 # Search for digest email
