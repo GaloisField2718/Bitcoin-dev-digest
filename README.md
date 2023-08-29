@@ -30,4 +30,23 @@ We need to setup the config in `.env` file. I used `email` and `KEY` names for c
 
 In the python virtual environnement simply run `python3 script.py`.
 
+## Automation
+
+I purposed to automate this workflow with `cron` to setup this automation I used `crontab -e` with :
+
+```
+* */2 * * * ./Bitcoin-dev-digest/automation_script.sh
+
+0 0 * * * cd ~/Bitcoin-dev-digest && ./push_script.sh
+```
+
+Before to run the automation we have to give rights on the script with : `chmod +x aaa.sh`.
+
+This automation makes : 
+- Every 2 hours the python script is running and add bitcoin-dev Digest in the right folder and save file in markdown.
+- Every day at midnight it pushes updates on github.
+
+
+
+
 
