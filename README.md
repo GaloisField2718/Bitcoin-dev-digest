@@ -17,7 +17,7 @@ Let me know if you need my help to do so <u>galoisfield2718@gmail.com</u>.
 ```
 pipenv shell
 
-> pipenv install --ignore-pipfile
+> pipenv sync
 ```
 
 If `--ignore-pipfile` flag doesn't work try `--dev-dependencies` flag.
