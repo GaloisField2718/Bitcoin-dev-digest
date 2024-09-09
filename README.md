@@ -1,4 +1,4 @@
-# Bitcoin-dev Digest python script saver
+# [Bitcoin-dev Digest](https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev) python script saver
 
 This script provides a way to save each mail which is distributed `To: bitcoin-dev@lists.linuxfoundation.org`. 
 This info is used at  `18 status, msgnums = imap.search(None, 'TO "bitcoin-dev@lists.linuxfoundation.org"')`.
